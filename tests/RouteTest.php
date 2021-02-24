@@ -46,7 +46,7 @@ class RouteTest extends TestCase
 
     public function testItReturnsServerErrorWhenInvalidSpec()
     {
-        config(['openapi.documentations.default.spec' => __DIR__ . '/openapi/invalid.json']);
+        config(['openapi.documentations.default.spec' => __DIR__.'/openapi/invalid.json']);
 
         $this->get($this->specUrl())
             ->assertStatus(500);

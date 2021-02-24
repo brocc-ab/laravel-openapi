@@ -19,7 +19,7 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
         $app['config']->set('openapi.storage_path', $this->storage());
         $app['config']->set(
             'openapi.documentations.default.spec',
-            __DIR__ . '/openapi/openapi.yaml'
+            __DIR__.'/openapi/openapi.yaml'
         );
         $app['config']->set('openapi.generate_always', true);
     }
@@ -31,10 +31,10 @@ abstract class TestCase extends \Orchestra\Testbench\TestCase
 
     protected function storage(string $filename = null): string
     {
-        $path = __DIR__ . '/storage';
+        $path = __DIR__.'/storage';
 
         if ($filename) {
-            $path .= '/' . ltrim($filename, '/');
+            $path .= '/'.ltrim($filename, '/');
         }
 
         return $path;

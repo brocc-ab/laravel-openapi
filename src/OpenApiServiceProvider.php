@@ -13,17 +13,17 @@ class OpenApiServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'openapi');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'openapi');
 
-        $this->loadRoutesFrom(__DIR__ . '/routes.php');
+        $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../resources/views' => base_path('resources/views/vendor/openapi'),
+                __DIR__.'/../resources/views' => base_path('resources/views/vendor/openapi'),
             ], 'openapi-views');
 
             $this->publishes([
-                __DIR__ . '/../config/openapi.php' => config_path('openapi.php'),
+                __DIR__.'/../config/openapi.php' => config_path('openapi.php'),
             ], 'openapi-config');
 
             $this->commands([
@@ -39,6 +39,6 @@ class OpenApiServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/openapi.php', 'openapi');
+        $this->mergeConfigFrom(__DIR__.'/../config/openapi.php', 'openapi');
     }
 }

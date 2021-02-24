@@ -16,7 +16,7 @@ class OpenApiTest extends TestCase
 
     public function testSavingFromYaml()
     {
-        $openapi = new OpenApi(__DIR__ . '/openapi/openapi.yaml');
+        $openapi = new OpenApi(__DIR__.'/openapi/openapi.yaml');
 
         $this->assertTrue($openapi->isValid());
         $this->assertEmpty($openapi->getErrors());
@@ -28,7 +28,7 @@ class OpenApiTest extends TestCase
 
     public function testSavingFromJson()
     {
-        $openapi = new OpenApi(__DIR__ . '/openapi/openapi.json');
+        $openapi = new OpenApi(__DIR__.'/openapi/openapi.json');
 
         $this->assertTrue($openapi->isValid());
         $this->assertEmpty($openapi->getErrors());
@@ -41,7 +41,7 @@ class OpenApiTest extends TestCase
 
     public function testItReturnsErrorsWhenGivenInvalidSpec()
     {
-        $openapi = new OpenApi(__DIR__ . '/openapi/invalid.yaml');
+        $openapi = new OpenApi(__DIR__.'/openapi/invalid.yaml');
 
         $this->assertFalse($openapi->isValid());
         $this->assertNotEmpty($openapi->getErrors());
@@ -49,7 +49,7 @@ class OpenApiTest extends TestCase
 
     public function testItDoesNotSaveDocWhenInvalidSpec()
     {
-        $openapi = new OpenApi(__DIR__ . '/openapi/invalid.yaml');
+        $openapi = new OpenApi(__DIR__.'/openapi/invalid.yaml');
 
         $path = $this->storage('invalid.json');
 

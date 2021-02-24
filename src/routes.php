@@ -12,7 +12,7 @@ Route::group(['namespace' => 'Brocc\LaravelOpenApi\Http\Controllers'], function 
         }
 
         $actions = [
-            'documentation' => $documentation
+            'documentation' => $documentation,
         ];
 
         $router->group($actions, function (Router $router) use ($documentation, $config) {

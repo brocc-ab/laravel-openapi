@@ -13,6 +13,6 @@ if (! function_exists('openapi_storage_path')) {
         $storage = config('openapi.storage_path');
         $file = config("openapi.documentations.{$documentation}.routes.openapi");
 
-        return rtrim($storage, '/') . '/' . ltrim($file, '/');
+        return rtrim($storage, '/').'/'.ltrim($file, '/');
     }
 }

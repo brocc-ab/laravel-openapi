@@ -1,0 +1,49 @@
+{
+    "name": "brocc/laravel-openapi",
+    "description": "Write OpenApi Specification for Laravel Applications",
+    "keywords": [
+        "openapi",
+        "laravel",
+        "docs"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brocc AB",
+            "email": "tech@brocc.se"
+        }
+    ],
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "cebe/php-openapi": "^1.5",
+        "laravel/framework": "^6.0|^7.0|^8.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.12",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Brocc\\LaravelOpenApi\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Brocc\\LaravelOpenApi\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Brocc\\LaravelOpenApi\\OpenApiServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

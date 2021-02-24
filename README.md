@@ -1,5 +1,9 @@
 # Write OpenAPI specifications for Laravel Applications
 
+[![Latest Version](https://img.shields.io/github/release/brocc-ab/laravel-openapi.svg?style=flat-square)](https://github.com/brocc-ab/laravel-openapi/releases)
+[![StyleCI](https://github.styleci.io/repos/341976946/shield?branch=master)](https://github.styleci.io/repos/341976946?branch=master)
+[![License](https://img.shields.io/packagist/l/brocc/laravel-openapi)](https://packagist.org/packages/brocc/laravel-openapi)
+
 This packages simplifies writing and structuring of OpenAPI specifications in YAML or JSON.
 
 ## Introduction

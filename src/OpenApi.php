@@ -12,17 +12,17 @@ class OpenApi
     /**
      * @var \cebe\openapi\spec\OpenApi
      */
-    private $openApi;
+    protected $openApi;
 
     /**
      * @var bool
      */
-    private $isValid;
+    protected $isValid;
 
     /**
      * @var array|null
      */
-    private $errors;
+    protected $errors;
 
     /**
      * @param string $spec
@@ -76,7 +76,7 @@ class OpenApi
      *
      * @throws OpenApiException
      */
-    private function readFromFile(string $spec): void
+    protected function readFromFile(string $spec): void
     {
         if (! File::exists($spec)) {
             throw new OpenApiException("{$spec} does not exist");

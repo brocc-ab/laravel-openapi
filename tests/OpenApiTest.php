@@ -22,6 +22,7 @@ class OpenApiTest extends TestCase
         $this->assertEmpty($openapi->getErrors());
 
         $path = $this->storage('openapi.yaml');
+
         $this->assertTrue($openapi->save($path));
         $this->assertFileExists($path);
     }

@@ -4,7 +4,7 @@ namespace Brocc\LaravelOpenApi\Tests;
 
 class RouteTest extends TestCase
 {
-    public function testGeneratedJsonDocIsAccessible()
+    public function testGeneratedJsonIsAccessible()
     {
         config(['openapi.documentations.default.routes.openapi' => 'openapi/openapi.json']);
 
@@ -15,7 +15,7 @@ class RouteTest extends TestCase
             ->assertOk();
     }
 
-    public function testGeneratedYamlDocIsAccessible()
+    public function testGeneratedYamlIsAccessible()
     {
         config(['openapi.documentations.default.routes.openapi' => 'openapi/openapi.yaml']);
 
@@ -26,7 +26,7 @@ class RouteTest extends TestCase
             ->assertOk();
     }
 
-    public function testGeneratedDocIsAccessibleWithoutFilename()
+    public function testGeneratedSpecIsAccessibleWithoutFilename()
     {
         $this->get($this->specUrl())
             ->assertOk();
